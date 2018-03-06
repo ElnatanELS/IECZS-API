@@ -18,6 +18,12 @@ public class MembroService {
 		return membrorepository.findAll();
 	}
 	
+	public Membro Adicionar(Membro membro) {
+		
+		return membrorepository.save(membro);
+		
+	}
+	
 	
 
 }
