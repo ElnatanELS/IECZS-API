@@ -1,0 +1,35 @@
+<form #frm="ngForm" (ngSubmit)="adicionar(frm)">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1>Gestão de Membros</h1>
+    </div>
+    <div class="ui-g-12 ui-fluid">
+      <label> Nome </label>
+      <input pInputText name='nome' ngModel [required]="true">
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+      <label>Data de Nascimento</label>
+      <p-calendar name="dataDeNascimento" dateFormart="dd/mm/yyyy" ngModel [required]="true"></p-calendar>
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+      <label> RG </label>
+      <input pInputText pKeyFilter="pint" name='rg' ngModel [required]="true">
+    </div>
+
+    <div class="ui-g-12 ui-fluid">
+      <label> Endereço </label>
+      <input  pInputText name='endereco' ngModel [required]="true">
+    </div>
+
+    <div class="ui-g-12 ui-fluid">
+        <label> Endereço </label>
+        <p-fileUpload name="myfile[]" url="./"></p-fileUpload>
+      </div>
+
+    <div class="ui-g-12">
+      <button pButton type="submit" label="Adicionar" [disabled]="frm.invalid"></button>
+    </div>
+  </div>
+</form>

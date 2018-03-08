@@ -3,7 +3,6 @@ package br.com.congregacionalzonasul.IECZSAPI.Domain;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
 import org.springframework.data.annotation.Id;
@@ -22,6 +21,36 @@ public class Membro {
 	private Date dataDeNascimento;
 	
 	private List<String> departamentos;
+	
+	private String endereco;
+	
+	private String avatar;
+	
+	private Date dataDeCriação;
+
+	public String getEndereço() {
+		return endereco;
+	}
+
+	public void setEndereço(String endereço) {
+		this.endereco = endereço;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public Date getDataDeCriação() {
+		return dataDeCriação;
+	}
+
+	public void setDataDeCriação(Date dataDeCriação) {
+		this.dataDeCriação = dataDeCriação;
+	}
 
 	public String getId() {
 		return id;
